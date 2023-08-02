@@ -11,10 +11,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script
-      type="module"
-      src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"
-    ></script>
+    <script src="https://unpkg.com/@stoplight/elements/web-components.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@stoplight/elements/styles.min.css"
+    />
   </head>
 
   <body>
@@ -54,7 +55,9 @@
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item disabled" href="#">v2.4.0</a>
+                      <a class="dropdown-item disabled" href="../v240/docs.html"
+                        >v2.4.0</a
+                      >
                     </li>
                     <li><a class="dropdown-item" href="#">v2.3.0</a></li>
                   </ul>
@@ -67,12 +70,11 @@
     </nav>
 
     <div class="container-fluid">
-      <rapi-doc
-        spec-url="https://raw.githubusercontent.com/devishke-orange/devi-ohrm-starter-docs/main/spec/v240/openapi.json"
-        theme="light"
-        show-header="false"
-      >
-      </rapi-doc>
+      <elements-api
+        apiDescriptionUrl="https://raw.githubusercontent.com/devishke-orange/devi-ohrm-starter-docs/main/spec/v240/openapi.json"
+        router="hash"
+        layout="sidebar"
+      />
     </div>
 
     <script
