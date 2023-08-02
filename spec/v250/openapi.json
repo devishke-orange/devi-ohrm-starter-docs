@@ -15,6 +15,19 @@
             }
         }
     ],
+    "tags": [
+        {
+            "name": "Admin/Education",
+            "description": "This endpoint can only be used by **Admin** Users. It facilitates CRUD (create, read, update, delete) operations on Education types (e.g. - Bachelors, Masters) which can be selected by an employee (ESS) when updating their profile."
+        },
+        {
+            "name": "Admin/Email Configuration",
+            "description": "This endpoint can only be used by **Admin** Users. It facilitates read and update operations for configuring emails. By configuring the email, admins can sign up users for email subscriptions."
+        }
+    ],
+    "security": [
+        "BearerAuth": []
+    ],
     "paths": {
         "/api/v2/admin/educations/{id}": {
             "get": {
@@ -22,6 +35,7 @@
                     "Admin/Education"
                 ],
                 "operationId": "85d2fb1521689313e1903de8a061a5c5",
+                "summary": "Retrieve an education record",
                 "parameters": [
                     {
                         "in": "path",
@@ -61,6 +75,7 @@
                     "Admin/Education"
                 ],
                 "operationId": "6769e5a43e5da9f99ec2b0af3c0cfcfe",
+                "summary": "Update an education record",
                 "parameters": [
                     {
                         "in": "path",
@@ -119,6 +134,7 @@
                     "Admin/Education"
                 ],
                 "operationId": "bbc76573c4c93471da0f0f965c06c221",
+                "summary": "Retrieve all education records",
                 "parameters": [
                     {
                         "name": "sortField",
@@ -175,6 +191,7 @@
                     "Admin/Education"
                 ],
                 "operationId": "c766cd3bf4c9fbc024211a9163b21fc2",
+                "summary": "Create an education record",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -218,6 +235,7 @@
                     "Admin/Education"
                 ],
                 "operationId": "6aa0615d708abfa41c03d8baff1e1444",
+                "summary": "Delete an education record",
                 "requestBody": {
                     "$ref": "#/components/requestBodies/DeleteRequestBody"
                 },
@@ -234,6 +252,7 @@
                     "Admin/Email Configuration"
                 ],
                 "operationId": "510d84c0525e60b623cd290f6def32c1",
+                "summary": "Retrieve email configuration details"
                 "responses": {
                     "200": {
                         "description": "Success",
@@ -263,6 +282,7 @@
                     "Admin/Email Configuration"
                 ],
                 "operationId": "78e7a202917547d3a627fadc8190561c",
+                "summary": "Update email configuration details",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -334,9 +354,10 @@
         "/api/v2/admin/email-subscriptions/{emailSubscriptionId}/subscribers": {
             "get": {
                 "tags": [
-                    "Admin/Email Configuration"
+                    "Admin/Email Configuration/Email Subscription"
                 ],
                 "operationId": "73565b0f61c6f9538a2a4d5871f26d7e",
+                "summary": "Retrieve all email subscribers for a subscription",
                 "parameters": [
                     {
                         "in": "path",
@@ -402,9 +423,10 @@
             },
             "post": {
                 "tags": [
-                    "Admin/Email Configuration"
+                    "Admin/Email Configuration/Email Subscription"
                 ],
                 "operationId": "52b59990a3a4fa8f5a72bca80073330a",
+                "summary": "Create an email subscriber",
                 "parameters": [
                     {
                         "in": "path",
@@ -459,9 +481,10 @@
             },
             "delete": {
                 "tags": [
-                    "Admin/Email Configuration"
+                    "Admin/Email Configuration/Email Subscription"
                 ],
                 "operationId": "df98edd6a567b57edc67ba695b6ce151",
+                "summary": "Delete an email subscriber",
                 "parameters": [
                     {
                         "in": "path",
@@ -485,9 +508,10 @@
         "/api/v2/admin/email-subscriptions/{emailSubscriptionId}/subscribers/{id}": {
             "get": {
                 "tags": [
-                    "Admin/Email Configuration"
+                    "Admin/Email Configuration/Email Subscription"
                 ],
                 "operationId": "bc01f9130f327a4c22f0551aa0df5ec2",
+                "summary": "Retrieve an email subscriber for a subscription",
                 "parameters": [
                     {
                         "in": "path",
@@ -532,9 +556,10 @@
             },
             "put": {
                 "tags": [
-                    "Admin/Email Configuration"
+                    "Admin/Email Configuration/Email Subscription"
                 ],
                 "operationId": "dc15fa496254ffeef0b33f41203212fc",
+                "summary": "Update an email subscriber",
                 "parameters": [
                     {
                         "in": "path",
@@ -602,9 +627,10 @@
         "/api/v2/admin/email-subscriptions": {
             "get": {
                 "tags": [
-                    "Admin/Email Configuration"
+                    "Admin/Email Configuration/Email Subscription"
                 ],
                 "operationId": "fadff6b98a2052ab9e62389162630c86",
+                "summary": "Get all email subscriptions",
                 "parameters": [
                     {
                         "name": "sortField",
@@ -660,9 +686,10 @@
         "/api/v2/admin/email-subscriptions/{id}": {
             "put": {
                 "tags": [
-                    "Admin/Email Configuration"
+                    "Admin/Email Configuration/Email Subscription"
                 ],
                 "operationId": "70c25099ae3c169d508e6c38bbb66f9d",
+                "summary": "Update an email subscription",
                 "parameters": [
                     {
                         "in": "path",
