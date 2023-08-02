@@ -2,7 +2,8 @@
     "openapi": "3.1.0",
     "info": {
         "title": "OrangeHRM Open Source : REST API v2 docs",
-        "version": "2.5.0"
+        "version": "2.5.0",
+        "description": "## Getting Started\n### Prerequisities\nBefore you begin working with the OrangeHRM REST APIs, ensure you have the following prerequisites in place:\n - *OAuth 2.0 client credentials*: To authenticate API requests, you will need access token. Obtain OAuth 2.0 client credentials from your OrangeHRM system administrator.\n - *HTTP Client (Optional)*: For making API requests, you will need an HTTP client such as cURL, Postman.\n###Authentication\nThe OrangeHRM REST API supports secure authentication mechanisms to safeguard access to the data. This section outlines the supported authentication methods, how to obtain access tokens."
     },
     "servers": [
         {
