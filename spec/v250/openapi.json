@@ -25,6 +25,11 @@
             "description": "This endpoint can only be used by **Admin** Users. It facilitates read and update operations for configuring emails. By configuring the email, admins can sign up users for email subscriptions."
         }
     ],
+    "security": [
+        {
+            "BearerAuth": []
+        }
+    ],
     "paths": {
         "/api/v2/admin/educations/{id}": {
             "get": {
