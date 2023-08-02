@@ -38,6 +38,7 @@
                 ],
                 "operationId": "85d2fb1521689313e1903de8a061a5c5",
                 "summary": "Retrieve an education record",
+                "description": "This endpoint can only be accessed by *admin* users",
                 "parameters": [
                     {
                         "in": "path",
